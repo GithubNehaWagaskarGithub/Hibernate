@@ -1,0 +1,28 @@
+package Util;
+
+import Model.Operation;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class InsertData {
+    public static void main(String[] args) {
+        Configuration cfg;
+        SessionFactory factory;
+        Session ses;
+        Transaction tx;
+
+        cfg=new Configuration().configure().addAnnotatedClass(Operation.class);
+        factory=cfg.buildSessionFactory();
+        ses= factory.openSession();
+
+        Operation o1=new Operation("Neha","Kesnand",76.89);
+
+        tx=ses.beginTransaction();
+        ses.save(o1);
+        tx.commit();
+        ses.close();
+        System.out.println("Data Inserted");
+    }
+}
