@@ -1,0 +1,9 @@
+<!--
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="Model.Student" table="student">
+        <id name="sId" column="S_Id"></id>
+        <property name="sName" column="S_Name"></property>
+        <property name="sStream" column="S_Stream"></property>
+        <property name="sFees" column="S_Fees"></property>
+    </class>
+</hibernate-mapping>-->
